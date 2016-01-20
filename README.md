@@ -1,0 +1,2 @@
+# ambassador
+Generic TCP ambassador
