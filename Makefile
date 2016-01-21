@@ -1,6 +1,6 @@
 REGISTRY          = quay.io/flippa
 PROJECT           = ambassador
-TAG              ?= v1
+TAG              ?= v2
 
 IMAGE = $(REGISTRY)/$(PROJECT):$(TAG)
 LATEST = $(REGISTRY)/$(PROJECT):latest
@@ -8,7 +8,7 @@ LATEST = $(REGISTRY)/$(PROJECT):latest
 .PHONY: build
 build: Dockerfile
 	docker build --rm -t $(IMAGE) .
-	docker tag $(IMAGE) $(LATEST)
+	docker tag -f $(IMAGE) $(LATEST)
 
 .PHONY: push
 push:
