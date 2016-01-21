@@ -1,6 +1,6 @@
 REGISTRY          = quay.io/flippa
 PROJECT           = ambassador
-TAG              ?= v2
+TAG              ?= v3
 
 IMAGE = $(REGISTRY)/$(PROJECT):$(TAG)
 LATEST = $(REGISTRY)/$(PROJECT):latest

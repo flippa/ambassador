@@ -15,5 +15,5 @@ if [ "$1" == "" ]; then
   echo "$cmd" | exec sh
 else
   echo Connecting to $1:$2...
-  exec socat -t 100000000 TCP4-LISTEN:$2,fork,reuseaddr TCP4:$1:$2
+  exec socat -t 100000000 TCP4-LISTEN:1024,fork,reuseaddr TCP4:$1:$2
 fi
