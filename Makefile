@@ -1,9 +1,8 @@
-REGISTRY          = quay.io/flippa
-PROJECT           = ambassador
+REPOSITORY       ?= 578700794486.dkr.ecr.us-east-1.amazonaws.com/ambassador
 TAG              ?= v3
 
-IMAGE = $(REGISTRY)/$(PROJECT):$(TAG)
-LATEST = $(REGISTRY)/$(PROJECT):latest
+IMAGE = $(REPOSITORY):$(TAG)
+LATEST = $(REPOSITORY):latest
 
 .PHONY: build
 build: Dockerfile
